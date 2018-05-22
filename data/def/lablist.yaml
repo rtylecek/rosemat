@@ -1,0 +1,172 @@
+L0:
+  id: 0
+  name: Unknown
+  color: [0, 0, 0]
+L1:
+  id: 1
+  name: Ground-Generic
+  color: [230, 230, 230]
+L2:
+  id: 2
+  name: Ground-Grass
+  color: [0, 204, 0]
+L3:
+  id: 3
+  name: Ground-Dirt
+  color: [77, 128, 0]
+L4:
+  id: 4
+  name: Ground-Gravel
+  color: [128, 128, 128]
+L5:
+  id: 5
+  name: Ground-Mulch
+  color: [128, 77, 0]
+L6:
+  id: 6
+  name: Ground-Pebbles
+  color: [179, 179, 179]
+L7:
+  id: 7
+  name: Ground-WoodChips
+  color: [179, 128, 0]
+L8:
+  id: 8
+  name: Ground-Pavement
+  color: [179, 204, 230]
+L9:
+  id: 10
+  name: Hedge-Generic
+  color: [0, 128, 128]
+L10:
+  id: 11
+  name: Hedge-Box
+  color: [128, 128, 0]
+L11:
+  id: 12
+  name: Hedge-Ivy
+  color: [128, 128, 77]
+L12:
+  id: 13
+  name: Hedge-Post
+  color: [51, 179, 179]
+L13:
+  id: 20
+  name: Topiary-Generic
+  color: [0, 179, 179]
+L14:
+  id: 21
+  name: Topiary-Cuboid
+  color: [0, 204, 179]
+L15:
+  id: 22
+  name: Topiary-Ellipsoid
+  color: [0, 230, 179]
+L16:
+  id: 23
+  name: Topiary-Cylinder
+  color: [0, 255, 179]
+L17:
+  id: 24
+  name: Topiary-Cone
+  color: [0, 204, 255]
+L18:
+  id: 30
+  name: Rose-Generic
+  color: [230, 0, 0]
+L19:
+  id: 31
+  name: Rose-Stem
+  color: [230, 26, 0]
+L20:
+  id: 32
+  name: Rose-Branch
+  color: [230, 51, 0]
+L21:
+  id: 33
+  name: Rose-Leaf
+  color: [230, 77, 0]
+L22:
+  id: 34
+  name: Rose-Bud
+  color: [230, 102, 0]
+L23:
+  id: 35
+  name: Rose-Flower
+  color: [230, 128, 0]
+L24:
+  id: 100
+  name: Obstacle-Generic
+  color: [26, 26, 26]
+L25:
+  id: 101
+  name: Obstacle-Bench
+  color: [77, 51, 26]
+L26:
+  id: 102
+  name: Obstacle-Tree
+  color: [77, 179, 26]
+L27:
+  id: 103
+  name: Obstacle-Fence
+  color: [51, 51, 230]
+L28:
+  id: 104
+  name: Obstacle-Steps
+  color: [153, 179, 128]
+L29:
+  id: 105
+  name: Obstacle-FlowerPot
+  color: [230, 179, 179]
+L30:
+  id: 106
+  name: Obstacle-Stone
+  color: [153, 179, 204]
+L31:
+  id: 107
+  name: Obstacle-Water
+  color: [0, 26, 230]
+L32:
+  id: 108
+  name: Obstacle-Wall
+  color: [255, 51, 77]
+L33:
+  id: 109
+  name: Obstacle-Post
+  color: [51, 153, 153]
+L34:
+  id: 110
+  name: Obstacle-Trunk
+  color: [102, 102, 0]
+L35:
+  id: 111
+  name: Obstacle-Human
+  color: [230, 128, 128]
+L36:
+  id: 200
+  name: Robot-Base
+  color: [0, 0, 128]
+L37:
+  id: 201
+  name: Robot-Vehicle
+  color: [0, 0, 179]
+L38:
+  id: 202
+  name: Robot-Arm
+  color: [0, 0, 204]
+L39:
+  id: 220
+  name: Background-Generic
+  color: [0, 0, 26]
+L40:
+  id: 221
+  name: Background-Road
+  color: [51, 77, 102]
+L41:
+  id: 222
+  name: Background-House
+  color: [0, 255, 255]
+L42:
+  id: 223
+  name: Background-Sky
+  color: [0, 0, 255]

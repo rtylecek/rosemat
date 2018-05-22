@@ -1,0 +1,5 @@
+{workPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge, bagPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge/sample_2017-05-17_14-57-31.bag,
+  modelPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge/sample_garden.ply,
+  calibPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge/camchain-2017-05-16-09-53-50.yaml,
+  optOverAlpha: 0.5, optPointSize: 3.0, anotPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge/anot,
+  wsPath: /home/radim/Documents/proj/TrimBot/rosemat/data/around_hedge/workspace.yaml}

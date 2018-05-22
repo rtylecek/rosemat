@@ -1,0 +1,72 @@
+Version: 1
+Semantic:
+  Unknown: 0
+  Reduced:
+    Grass: 1
+    Ground: 2
+    Pavement: 3
+    Hedge: 4
+    Topiary: 5
+    Rose: 6
+    Obstacle: 7
+    Tree: 8
+    Background: 9
+Mapping:
+  Unknown: [0, 0]
+  Ground: 
+    Generic: [1, 1]      # general ground label
+    Grass: [2, 1]        # tussocks (green)
+    Dirt: [3, 2]         # fine bare soil (brown/grey)
+    Gravel: [4, 2]       # small stone chippings (grey) 
+    Mulch: [5, 2]        # shredded bark (dark brown) 
+    Pebbles: [6, 2]      # larger round stones (grey)
+    WoodChips: [7, 2]    # chipped pieces of wood (light brown)
+    Pavement: [8, 3]     # solid or tiled concrete (grey)
+  Hedge:    # line of dense bushes with rectangular profile
+    Generic: [10, 4]   # general label for 
+    Box: [11, 4]           # dense buxus plant hedge 
+    Ivy: [12, 4]           # cimbing hedera plant on a support
+    Post: [13, 4]          # support
+  Topiary:   # individual bushes of primitive shapes
+    Generic: [20, 5] 
+    Cuboid: [21, 5] 
+    Ellipsoid: [22, 5] 
+    Cylinder: [23, 5] 
+    Cone: [24, 5] 
+  Rose: 
+    Generic: [30, 6] # general rose label
+    Stem: [31, 6]
+    Branch: [32, 6]
+    Leaf: [33, 6]
+    Bud: [34, 6]
+    Flower: [35, 6]
+  Obstacle: 
+    Generic: [100, 7] # general obstacle label
+    Bench: [101, 7]
+    Tree: [102, 8]
+    Fence: [103, 7]
+    Steps: [104, 7]
+    FlowerPot: [105, 7]
+    Stone: [106, 7]
+    Water: [107, 7]
+    Wall: [108, 7]
+    Post: [109, 7]
+    Trunk: [110, 8]
+    Human: [111, 7]
+  Robot:
+    Base: [200, 7]
+    Vehicle: [201, 0]
+    Arm: [202, 0]
+  Background: 
+    Generic: [220, 9]
+    Road: [221, 9]
+    House: [222, 9]
+    Sky: [223, 9]
+Shape:
+  Unknown: 0
+  Cuboid: 1
+  Ellipsoid: 2
+  Cylinder: 3
+  Cone: 4
+  Plane: 5
+  SweptRectProfile: 6

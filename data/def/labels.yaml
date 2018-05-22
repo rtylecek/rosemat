@@ -1,0 +1,61 @@
+Version: 1
+Semantic:
+  Unknown: 0
+  Ground: 
+    Generic: 1      # general ground label
+    Grass: 2        # tussocks (green)
+    Dirt: 3         # fine bare soil (brown/grey)
+    Gravel: 4       # small stone chippings (grey) 
+    Mulch: 5        # shredded bark (dark brown) 
+    Pebbles: 6      # larger round stones (grey)
+    WoodChips: 7    # chipped pieces of wood (light brown)
+    Pavement: 8     # solid or tiled concrete (grey)
+  Hedge:    # line of dense bushes with rectangular profile
+    Generic: 10   # general label for 
+    Box: 11           # dense buxus plant hedge 
+    Ivy: 12           # cimbing hedera plant on a support
+    Post: 13          # support
+  Topiary:   # individual bushes of primitive shapes
+    Generic: 20 
+    Cuboid: 21
+    Ellipsoid: 22
+    Cylinder: 23
+    Cone: 24
+  Rose: 
+    Generic: 30 # general rose label
+    Stem: 31
+    Branch: 32
+    Leaf: 33
+    Bud: 34
+    Flower: 35
+  Obstacle: 
+    Generic: 100 # general obstacle label
+    Bench: 101
+    Tree: 102
+    Fence: 103
+    Steps: 104
+    FlowerPot: 105
+    Stone: 106
+    Water: 107
+    Wall: 108
+    Post: 109
+    Trunk: 110
+    Human: 111
+  Robot:
+    Base: 200
+    Vehicle: 201
+    Arm: 202
+  Background: 
+    Generic: 220
+    Road: 221
+    House: 222
+    Sky: 223
+Shape:
+  Unknown: 0
+  Cuboid: 1
+  Ellipsoid: 2
+  Cylinder: 3
+  Cone: 4
+  Plane: 5
+  SweptRectProfile: 6
+

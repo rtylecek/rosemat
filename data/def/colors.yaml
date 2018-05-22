@@ -1,0 +1,52 @@
+Version: 1
+Semantic:
+  Unknown: [0, 0, 0]
+  Ground: 
+    Generic: [0.9, 0.9, 0.9]     # general ground label
+    Grass: [0,   0.8, 0  ]        # tussocks (green)
+    Dirt: [0.3, 0.5, 0  ]         # fine bare soil (brown/grey)
+    Gravel: [0.5, 0.5, 0.5]       # small stone chippings (grey) 
+    Mulch: [0.5, 0.3, 0  ]        # shredded bark (dark brown) 
+    Pebbles: [0.7, 0.7, 0.7]      # larger round stones (grey)
+    WoodChips: [0.7, 0.5, 0]    # chipped pieces of wood (light brown)
+    Pavement: [0.7, 0.8, 0.9]     # solid or tiled concrete (grey)
+  Hedge:    # line of dense bushes with rectangular profile
+    Generic: [0,  0.5, 0.5]   # general label for 
+    Box: [0.5, 0.5, 0  ]          # dense buxus plant hedge 
+    Ivy: [0.5, 0.5, 0.3  ]           # cimbing hedera plant on a support
+    Post: [0.2, 0.7, 0.7]          # support
+  Topiary:   # individual bushes of primitive shapes
+    Generic: [0, 0.7, 0.7] 
+    Cuboid: [0, 0.8, 0.7]
+    Ellipsoid: [0, 0.9, 0.7]
+    Cylinder: [0, 1, 0.7]
+    Cone: [0, 0.8, 1]
+  Rose: 
+    Generic: [0.9, 0, 0 ] # general rose label
+    Stem:  [0.9, 0.1, 0 ]
+    Branch:   [0.9, 0.2, 0 ]
+    Leaf: [0.9, 0.3, 0 ]
+    Bud: [0.9, 0.4, 0 ]
+    Flower: [0.9, 0.5, 0 ]
+  Obstacle: 
+    Generic: [0.1, 0.1, 0.1] # general obstacle label
+    Bench: [0.3, 0.2, 0.1]
+    Tree: [0.3, 0.7, 0.1]
+    Fence: [0.2, 0.2, 0.9]
+    Steps: [0.6, 0.7, 0.5]
+    FlowerPot: [0.9, 0.7, 0.7]
+    Stone: [0.6, 0.7, 0.8]
+    Water: [0, 0.1, 0.9]
+    Wall: [1, 0.2, 0.3]
+    Post: [0.2, 0.6, 0.6]
+    Trunk: [0.4, 0.4, 0  ]
+    Human: [0.9, 0.5, 0.5  ]
+  Robot:
+    Base: [0, 0, 0.5]
+    Vehicle: [0, 0, 0.7]
+    Arm: [0, 0, 0.8]
+  Background: 
+    Generic: [0, 0, 0.1]
+    Road: [0.2, 0.3, 0.4]
+    House: [0, 1, 1]
+    Sky: [0, 0, 1]
