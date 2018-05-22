@@ -5,7 +5,7 @@ Documentation in [wiki](https://github.com/rtylecek/rosemat/wiki).
 
 ## Main Features
 
-* Pixelwise 
+* Pixelwise semantic annotation with configrable set of classes
 * Guide 2D annotation of captured images using 3D model of the scene
 * Multiple camera topics from bagfile
 * Camera calibration from Kalibr
