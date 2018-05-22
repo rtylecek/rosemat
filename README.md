@@ -15,3 +15,6 @@ Documentation in [wiki](https://github.com/rtylecek/rosemat/wiki).
 * Project point cloud or mesh model with semantics
 * Optical flow plug-in for next frame transfer
 * Export to various formats
+
+![ROS](http://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png)
+![Matlab](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/267px-Matlab_Logo.png)
