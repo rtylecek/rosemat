@@ -3,6 +3,8 @@ Rosbag Semantic Annotation Tool for Matlab
 
 Documentation in [wiki](https://github.com/rtylecek/rosemat/wiki).
 
+![UI](https://raw.githubusercontent.com/rtylecek/rosemat/master/rosemat-ui.png)
+
 ## Main Features
 
 * Pixelwise semantic annotation with configrable set of classes
