@@ -22,5 +22,7 @@ Radim Tylecek, University of Edinburgh
 
 rtylecek@inf.ed.ac.uk
 
+[![HitCount](http://hits.dwyl.io/rtylecek/rosemat.svg)](http://hits.dwyl.io/rtylecek/rosemat)
+
 ![ROS](http://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png)
 ![Matlab](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/267px-Matlab_Logo.png)
