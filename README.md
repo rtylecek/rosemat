@@ -18,11 +18,9 @@ Documentation in [wiki](https://github.com/rtylecek/rosemat/wiki).
 
 ## Author
 
-Radim Tylecek, University of Edinburgh 
+[Radim Tylecek, University of Edinburgh](http://homepages.inf.ed.ac.uk/rtylecek/), `rtylecek@inf.ed.ac.uk`
 
-rtylecek@inf.ed.ac.uk
-
-If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/2249)
+If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/2249):
 
 ```
 @Article{s18072249,
@@ -38,6 +36,7 @@ If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/
 }
 ```
 
+This work was supported by EU project [TrimBot2020](http://trimbot2020.webhosting.rug.nl/).
 
 [![HitCount](http://hits.dwyl.io/rtylecek/rosemat.svg)](http://hits.dwyl.io/rtylecek/rosemat)
 
