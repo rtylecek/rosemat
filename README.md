@@ -22,6 +22,23 @@ Radim Tylecek, University of Edinburgh
 
 rtylecek@inf.ed.ac.uk
 
+If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/2249)
+
+```
+@Article{s18072249,
+  AUTHOR = {Tylecek, Radim and Fisher, Robert  B.},
+  TITLE = {Consistent Semantic Annotation of Outdoor Datasets via 2D/3D Label Transfer},
+  JOURNAL = {Sensors},
+  VOLUME = {18},
+  YEAR = {2018},
+  NUMBER = {7},
+  ARTICLE NUMBER = {2249},
+  URL = {http://www.mdpi.com/1424-8220/18/7/2249},
+  ISSN = {1424-8220},DOI = {10.3390/s18072249}
+}
+```
+
+
 [![HitCount](http://hits.dwyl.io/rtylecek/rosemat.svg)](http://hits.dwyl.io/rtylecek/rosemat)
 
 ![ROS](http://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png)
