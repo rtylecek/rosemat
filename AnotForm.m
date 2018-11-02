@@ -111,9 +111,9 @@ handles.camList = {};
 for i = 1:size(handles.bag.AvailableTopics,1)
   top = string(handles.bag.AvailableTopics.Properties.RowNames(i));
   if strcmp(string(handles.bag.AvailableTopics{i,'MessageType'}),'sensor_msgs/Image')
-    if endsWith(top,'_raw')
+    %if endsWith(top,'_raw')
       handles.camList = [handles.camList; top ];
-    end
+    %end
   end
 end
 handles.lstCameras.String = handles.camList;
@@ -571,10 +571,14 @@ if ~useFlow
 else
   %% optical flow - https://github.com/suhangpro/epicflow.git
   fprintf('Optical flow (ETA: 60 s) ...'); tic;
-  %flowPath = get_epicflow(prevGray, thisGray);
-  flowPath = get_epicflow(thisGray, prevGray);
+  flowPath = replace(handles.framePath,'.png','.flo');
+  if ~exist(flowPath,'file')
+    flowPath = get_epicflow(thisGray, prevGray,flowPath);
+  end
   flow = readFlowFile(flowPath);
-  %figure; imshow(flowToColor(flow));
+  imgFlow = flowToColor(flow);
+  %
+  %figure; imshow(imgFlow);
   toc;
   %% transfer
   thisAnot = zeros(size(prevAnot),'uint8');
@@ -961,7 +965,7 @@ function tlbTransfer_ClickedCallback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 modifiers = get(handles.figAnot,'currentModifier');
-handles = TransferFrame(handles,ismember('shift',modifiers));
+handles = TransferFrame(handles,~ismember('shift',modifiers));
 guidata(hObject,handles);
 
 
@@ -1527,21 +1531,23 @@ function tlbExport_ClickedCallback(hObject, eventdata, handles)
 % hObject    handle to tlbExport (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-startFrame = handles.idFrame;
-export.project = 0;
-export.gta = 0;
-export.gtr = 0;
-export.undist = 0;
-export.over = 0;
-export.cam = 0;
-export.vid = 0;
-export.dmap = 2;
-export.sgm = 0;
-
+%% export parameters - customizable
+startFrame = handles.idFrame;  % first frame
+export.frames = 1; %
+export.project = 0;  % project model to images
+export.gta = 0;      % export full set annotation 
+export.gtr = 0;      % export reduced set anot
+export.undist = 0;   % export undistorted image
+export.over = 0;   % export overlay of rgb and annotation
+export.cam = 0;    % export camera params
+export.vid = 0;    % export video of overlays
+export.dmap = 0;   % export projected depth map
+export.sgm = 0;    % export SGM stereo 
+export.flo = 1;    % generate FLO files for optical flow transfer
 %% all cameras from the same frame
-for idCam = 0:2:9
+for idCam = 1:length(handles.lstCameras.String)
   %% load camera
-  handles = LoadTopic(sprintf('/uvc_camera/cam_%d/image_raw',idCam),handles);
+  handles = LoadTopic(handles.lstCameras.String{idCam},handles);
   handles = LoadFrame(startFrame,handles);
   
   exPath = replace(handles.framePath,'/anot/','/export/');
@@ -1571,13 +1577,13 @@ for idCam = 0:2:9
     imgMask = zeros(size(handles.imgAnot));
   end
   %% read reduced map
-  reduced = ReadLabels('yaml/reduced/');
+  reduced = read_labels('data/def/reduced/');
   camsT = zeros(100,3);
   camsR = zeros(100,3);
   fid = 1;
-  
+  prevGray = [];
   %% enumerate
-  while handles.idFrame<1020 %handles.sldFrames.Max-10
+  while handles.idFrame<handles.sldFrames.Max-export.frames
     %% go through frames
     if export.project
       handles.project.optPointSize = 1;
@@ -1702,10 +1708,29 @@ for idCam = 0:2:9
       writeVideo(vid,imgExport);
     end
     %% go to next
-    handles = LoadFrame(handles.idFrame+10, handles);
+    prevGray = medfilt2(handles.imgGray,[3 3]);
+
+    handles = LoadFrame(handles.idFrame+export.frames, handles);
     handles.sldFrames.Value = handles.idFrame;
     guidata(hObject,handles);
     fid = fid+1;
+    
+    if export.flo
+      %% flow
+      thisGray = medfilt2(handles.imgGray,[3 3]);
+      fprintf('Optical flow (ETA: 60 s) ...');
+      flowPath = replace(handles.framePath,'.png','.flo');
+      if ~exist(flowPath,'file')
+        tic;
+        flowPath = get_epicflow(thisGray, prevGray, flowPath);
+        toc;
+      end
+      fprintf('written to %s\n',flowPath);
+      %flow = readFlowFile(flowPath);
+      %imgFlow = flowToColor(flow);
+      %
+      %figure; imshow(imgFlow);
+    end
   end
   %%
   if export.vid
@@ -1729,8 +1754,7 @@ for idCam = 0:2:9
     imgRight = undistortImage(handles.imgRaw,handles.calib.camParams);
     %% sgm
     dispSGM = disparity(imgLeft,imgRight);
-  end  
-  
+  end
 end
 
 % --------------------------------------------------------------------

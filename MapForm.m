@@ -62,7 +62,6 @@ addpath './utils/x3d';
 addpath './utils/x3d/functions';
 
 % Choose default command line output for Main
-handles.rosNode = [];
 handles.output = hObject;
 handles.selectedNode = [];
 handles.selectedFace = 0;
@@ -1796,13 +1795,5 @@ function figMain_CloseRequestFcn(hObject, eventdata, handles)
 % hObject    handle to figMain (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-if ~isempty(handles.rosNode)
-  handles.rosNode.delete;
-  handles.rosNode = [];
-end
-if isfield(handles,'tmrOccGrid') && ~isempty(handles.tmrOccGrid)
-  stop(handles.tmrOccGrid);
-  delete(handles.tmrOccGrid);
-end
 % Hint: delete(hObject) closes the figure
 delete(hObject);
