@@ -18,7 +18,7 @@ Documentation in [wiki](https://github.com/rtylecek/rosemat/wiki).
 
 ## Author
 
-[Radim Tylecek, University of Edinburgh](http://homepages.inf.ed.ac.uk/rtylecek/), `rtylecek@inf.ed.ac.uk`
+[Radim Tylecek, University of Edinburgh](mailto:radim.tylecek@gmail.com)
 
 If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/2249):
 
@@ -37,8 +37,6 @@ If you use our tool, please cite our [paper](http://www.mdpi.com/1424-8220/18/7/
 ```
 
 This work was supported by EU project [TrimBot2020](http://trimbot2020.webhosting.rug.nl/).
-
-[![HitCount](http://hits.dwyl.io/rtylecek/rosemat.svg)](http://hits.dwyl.io/rtylecek/rosemat)
 
 ![ROS](http://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png)
 ![Matlab](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/267px-Matlab_Logo.png)
